@@ -24,8 +24,8 @@ Multi part system broken into 4 services
 
 Property Owner Identifier Tasks:
 - create file reader (read future output of Property Identifier)
-- create "main" method that will run the system, accept addresses (start with one address)
-- create data classes for addresses, owners, and addresses with list of owners
+- (Vince) create "main" method that will run the system, accept addresses (start with one address)
+- (Ben) create data classes for addresses, owners, and addresses with list of owners
 - add generic data source (mls, county tax records, phone book, ect.)
 - add specific data source
 - add datasource rule
