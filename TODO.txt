@@ -1,0 +1,36 @@
+This file is where we will keep a high level list of tasks that need to be done.
+
+Design:
+
+Multi part system broken into 4 services
+- Property Identifier
+-- finds identifying information about properties of interest, such as addresses
+-- saves that information in flat files
+
+- Property Owner Identifier
+-- reads property information from a flat file
+-- mines multiple data sources
+-- tries to find contact information for the owner of that property
+-- creates the association between a property and an owner
+-- saves the enriched property information in a flat file
+
+- eMarketer
+-- reads enriched property information from flat file
+-- contacts property owners with a marketing message
+-- tracks which messages have been sent to which owners
+-- tracks performance of different marketing messages
+
+
+
+Property Owner Identifier Tasks:
+- create file reader
+- create "main" method that will run the system, accept address
+- create data classes for addresses, owners, and addresses with list of owners
+- add generic data source (mls, county tax records, phone book, ect.)
+- add specific data source
+- add datasource rule
+-- how to search that datasource for owner information
+- add consolidator and aggregator (condence multiple records into one owner)
+- save the enriched data in a flat file
+-- connect to google drive
+
