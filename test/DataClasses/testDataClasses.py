@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 
+#import unittest
+#sys.path.insert(0, '/')
+#import owner
 import unittest, sys
-sys.path.append('../../src/DataClasses')
+sys.path.append('../../')
+from src.DataClasses.owner import Owner
+from src.DataClasses.property import Property
+from src.DataClasses.link import Link
 
 class TestDataClasses(unittest.TestCase):
 	def test_owner(self):
@@ -58,12 +64,24 @@ class TestDataClasses(unittest.TestCase):
 			'state': 'OR',
 			'zip': '97209'
 		}
+		testAddress2 = {
+			'number': '927',
+			'street': 'NW 14th Ave',
+			'line2': '',
+			'city': 'Portland',
+			'state': 'OR',
+			'zip': '97210'
+		}
+
 		testResidenceType = 'Vacasa'
 		testProperty = Property(testAddress, testResidenceType)
+		testProperty2 = Property(testAddress2, testResidenceType)
+		testProperties = [testProperty, testProperty2]
 
-		testLink = Link(testOwner, testProperty)
+		testLink = Link(testOwner, testProperties)
 		self.assertEquals(testLink.owner, testOwner)
-		self.assertEquals(testLink.property, testProperty)
+		self.assertEquals(testLink.properties[0], testProperty)
+		self.assertEquals(testLink.properties, testProperties)
 
 	if __name__ == '__main__':
 		unittest.main()

@@ -18,8 +18,9 @@ class Property():
 	'''
 	Function: returns address as a string
 	Parameters: none
-	'''
+
 	def getAddressAsString():
 		if (self.line2 != ''):
-			return '' + self.number + ' ' + self.street + ' ' + self.line2 + ' ' + self.city + ', ' self.state + ' ' + self.zip
-		return '' + self.number + ' ' + self.street + ' ' + self.city + ', ' self.state + ' ' + self.zip
+			return ('' + self.number + ' ' + self.street + ' ' + self.line2 + ' ' + self.city + ', ' self.state + ' ' + self.zip)
+		return ('' + self.number + ' ' + self.street + ' ' + self.city + ', ' self.state + ' ' + self.zip)
+	'''
