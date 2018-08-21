@@ -4,9 +4,10 @@ class FlatFilePersister():
 
     def persistfile(self):
         print('persistfile called with ' + self.csv)
+        # TODO: connect to google drive and save file
 
 
 if __name__ == '__main__':
     csv = 'value,value,value'
-    flatfilepersister = FlatFilePersister(csv)
-    flatfilepersister.persistfile()
+    persister = FlatFilePersister(csv)
+    persister.persistfile()
